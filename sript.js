@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         description: "Адаптивен уебсайт за онлайн магазин, изграден с HTML, CSS, JavaScript и Bootstrap.",
         link: "http://biocherry.byethost12.com/"
       }
+      // Можете да добавите още проекти тук
     ];
   
     // Референция към контейнера за проекти
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
       card.innerHTML = `
         <h3>${project.title}</h3>
         <p>${project.description}</p>
-        <a href="${project.link}" target="_blank" class="btn">Вижте проекта</a>
+        <a href="${project.link}" target="_blank" class="btn primary">Вижте проекта</a>
       `;
       return card;
     }
@@ -39,8 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Извикване на функцията за показване на проектите при зареждане на DOM
     displayProjects(projectsData);
   
-    // Бонус: Плавно превъртане при кликване на навигационните линкове
-    const navLinks = document.querySelectorAll('#navbar a');
+    // Плавно превъртане при кликване на навигационните линкове
+    const navLinks = document.querySelectorAll('.navbar a');
   
     navLinks.forEach(link => {
       link.addEventListener('click', function(event) {
@@ -50,6 +51,24 @@ document.addEventListener('DOMContentLoaded', () => {
         if (targetElement) {
           targetElement.scrollIntoView({ behavior: 'smooth' });
         }
+        // Затваряне на мобилното меню след клик (ако е отворено)
+        const navbarUl = document.querySelector('.navbar ul');
+        const hamburger = document.querySelector('.hamburger');
+        if (window.innerWidth <= 768 && navbarUl.classList.contains('active')) {
+          navbarUl.classList.remove('active');
+          hamburger.classList.remove('open');
+        }
       });
     });
+  
+    // Функционалност за бургер менюто (за малки екрани)
+    const hamburger = document.querySelector('.hamburger');
+    const navbarUl = document.querySelector('.navbar ul');
+  
+    if (hamburger && navbarUl) {
+      hamburger.addEventListener('click', () => {
+        navbarUl.classList.toggle('active');
+        hamburger.classList.toggle('open');
+      });
+    }
   });
