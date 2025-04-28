@@ -4,46 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Milko Trandev | Portfolio</title>
+  <meta name="description" content="Портфолио на Милко Тръндев - уеб и мобилен разработчик. Проекти, умения и контактна информация.">
+  <meta name="keywords" content="портфолио, Милко Тръндев, уеб разработка, мобилна разработка, React, Node.js, JavaScript">
+  <meta name="author" content="Milko Trandev">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-</head>
+  <link rel="canonical" href="https://mtrandev.github.io/"> </head>
 <body>
 
-  <header id="hero">
-    <div class="hero-content">
-      <h1>Hi, I'm Milko Trandev.</h1>
-      <p>I'm a Web and Mobile Developer passionate about building clean and responsive applications.</p>
-      <a href="#projects" class="btn">View My Work</a>
+  <header class="hero"> <div class="hero-content">
+      <h1>Здравейте, аз съм Милко Тръндев.</h1>
+      <p>Аз съм уеб и мобилен разработчик, запален по създаването на чисти и адаптивни приложения.</p>
+      <a href="#projects" class="btn">Вижте моите проекти</a>
     </div>
   </header>
 
-  <nav id="navbar">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
+  <nav class="navbar"> <ul>
+      <li><a href="#about">За мен</a></li>
+      <li><a href="#projects">Проекти</a></li>
+      <li><a href="#skills">Умения</a></li>
+      <li><a href="#contact">Контакти</a></li>
     </ul>
   </nav>
 
   <main>
-    <section id="about">
-      <h2>About Me</h2>
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">За мен</h2>
       <p>
-        I hold a Bachelor's degree in Finance and I am currently pursuing a Master's degree in Mobile and Web Technologies at the University of Economics – Varna.
-        I'm passionate about creating intuitive and modern web/mobile applications using technologies like HTML, CSS, JavaScript, React, Node.js, SQL, and MongoDB.
+        Притежавам бакалавърска степен по финанси и в момента следвам магистърска програма по Мобилни и уеб технологии в Икономически университет – Варна.
+        Страстен съм в създаването на интуитивни и модерни уеб/мобилни приложения, използвайки технологии като HTML, CSS, JavaScript, React, Node.js, SQL и MongoDB.
       </p>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Проекти</h2>
       <div class="projects-container" id="projects-container">
-        <!-- JavaScript will inject projects here -->
-      </div>
+        </div>
     </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
+    <section id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Умения</h2>
       <ul class="skills-list">
         <li>HTML5</li>
         <li>CSS3</li>
@@ -56,19 +58,19 @@
       </ul>
     </section>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <p>If you'd like to collaborate or have any questions, feel free to reach out!</p>
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Контакти</h2>
+      <p>Ако имате предложения за сътрудничество или въпроси, не се колебайте да се свържете с мен!</p>
       <div class="contact-buttons">
-        <a href="mailto:milkotrandev@gmail.com" class="btn">Email Me</a>
-        <a href="https://www.linkedin.com/in/milko-trandev-33907b292" target="_blank" class="btn">LinkedIn</a>
-        <a href="https://github.com/mtrandev" target="_blank" class="btn">GitHub</a>
+        <a href="mailto:milkotrandev@gmail.com" class="btn">Изпратете ми имейл</a>
+        <a href="https://www.linkedin.com/in/milko-trandev-33907b292" target="_blank" rel="noopener noreferrer" class="btn">LinkedIn</a>
+        <a href="https://github.com/mtrandev" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Milko Trandev. All rights reserved.</p>
+    <p>© 2025 Милко Тръндев. Всички права запазени.</p>
   </footer>
 
   <script src="script.js"></script>
