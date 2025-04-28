@@ -5,50 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Milko Trandev - Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <header class="hero">
-    <h1>Milko Trandev</h1>
-    <p>Web & Mobile Developer | Bachelor's in Finance | Master's Student in Mobile and Web Technologies</p>
-    <a href="#contact" class="btn">Contact Me</a>
+    <div class="container">
+      <h1 class="fade-in">Milko Trandev</h1>
+      <p id="animated-subtitle" class="fade-in-delay">Web Developer | Mobile Developer | Lifelong Learner</p>
+      <a href="#contact" class="btn-outline fade-in-delay2">Contact Me</a>
+    </div>
   </header>
 
   <nav>
-    <ul>
+    <ul class="container">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <main>
+  <main class="container">
     <section id="about" class="section">
       <h2>About Me</h2>
       <p>
-        I hold a Bachelor's degree in Finance and I am currently pursuing a Master’s degree in Mobile and Web Technologies at the University of Economics – Varna.
-        I am passionate about creating intuitive web and mobile applications. I have built projects using HTML, CSS, JavaScript, React, Node.js, SQL, and MongoDB.
+        I hold a Bachelor's degree in Finance and I am currently pursuing a Master's degree in Mobile and Web Technologies at the University of Economics – Varna.
+        I am passionate about creating intuitive web and mobile applications using HTML, CSS, JavaScript, React, Node.js, SQL, and MongoDB.
       </p>
     </section>
 
     <section id="projects" class="section">
       <h2>Projects</h2>
       <div class="projects-grid" id="projects-grid">
-        <!-- JavaScript will insert project cards here -->
       </div>
     </section>
 
     <section id="contact" class="section">
       <h2>Contact</h2>
       <div class="contact-links">
-        <a href="mailto:milkotrandev@gmail.com" class="btn">Email Me</a>
-        <a href="https://www.linkedin.com/in/milko-trandev-33907b292" target="_blank" class="btn">LinkedIn</a>
-        <a href="https://github.com/mtrandev" target="_blank" class="btn">GitHub</a>
+        <a href="mailto:milkotrandev@gmail.com" class="btn-outline">Email Me</a>
+        <a href="https://www.linkedin.com/in/milko-trandev-33907b292" target="_blank" class="btn-outline">LinkedIn</a>
+        <a href="https://github.com/mtrandev" target="_blank" class="btn-outline">GitHub</a>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="fade-in">
     <p>© 2025 Milko Trandev. All rights reserved.</p>
   </footer>
 
