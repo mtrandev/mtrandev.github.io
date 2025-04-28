@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Milko Trandev - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="fade-in">
+    <h1>Milko Trandev</h1>
+    <p>Web & Mobile Developer | Master’s Student in Mobile and Web Technologies</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="about" class="fade-in">
+      <h2>About Me</h2>
+      <p>I am passionate about building modern web and mobile applications. I'm currently pursuing a Master's degree in Mobile and Web Technologies at the University of Economics – Varna, with skills in HTML, CSS, JavaScript, React, Node.js, and SQL.</p>
+    </section>
+
+    <section id="projects" class="fade-in">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>BookStore Web App</h3>
+          <p>Full-stack application using React, Node.js, and MongoDB.</p>
+          <a href="https://github.com/mtrandev/BookStore" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>Organic Shop Website</h3>
+          <p>Responsive e-commerce site using HTML5, CSS3, JavaScript, and Bootstrap.</p>
+          <a href="http://biocherry.byethost12.com/" target="_blank">Visit Site</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+      <h2>Contact</h2>
+      <p>Let's connect!</p>
+      <ul>
+        <li><a href="mailto:milkotrandev@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/milko-trandev-33907b292" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/mtrandev" target="_blank">GitHub</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Milko Trandev. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.3,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        appearOnScroll.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+</body>
+</html>
